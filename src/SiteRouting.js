@@ -8,6 +8,7 @@ const SiteRouting = () => (
       <Route exact path="/" component={App} />
       <Route path="/pdp" component={ProductDetailsPage} />
       <Route path="/plp" component={ProductsListingPage} />
+      <Route component={NoMatch} />
     </Switch>
   </Router>
 );
@@ -19,7 +20,12 @@ const ProductDetailsPage = () => (
 );
 const ProductsListingPage = () => (
   <div>
-    <h2>PDP</h2>
+    <h2>PLP</h2>
+  </div>
+);
+const NoMatch = () => (
+  <div>
+    <h2>404</h2>
   </div>
 );
 

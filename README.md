@@ -9,6 +9,7 @@ No newline at end of file
 
 # Routing
 
-Routing use done using [React Router](https://reacttraining.com/react-router/)
+All the new routes should be defined in SiteRouting.js which is a context for entire app.
 
-Use [Examples](https://reacttraining.com/react-router/web/example/basic)
+Routing use done using [React Router](https://reacttraining.com/react-router/)
+, some [Examples](https://reacttraining.com/react-router/web/example/basic)

@@ -14,7 +14,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        Test routing: <Link to="/pdp">PDP</Link> or <Link to="/PLP">PLP</Link>
+        Test routing: <Link to="/pdp">PDP</Link> or <Link to="/plp">PLP</Link>
       </div>
     );
   }
