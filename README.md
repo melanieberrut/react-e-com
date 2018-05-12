@@ -9,7 +9,12 @@ No newline at end of file
 
 # Routing
 
-All the new routes should be defined in SiteRouting.js which is a context for entire app.
+All the new routes should be defined in App.js which is a context for entire app.
 
 Routing use done using [React Router](https://reacttraining.com/react-router/)
 , some [Examples](https://reacttraining.com/react-router/web/example/basic)
+
+# Endpoints
+
+Endpoints are saved as JSON files under _public/endpoints_ directory.
+ProductList can be also accessed as: https://next.json-generator.com/api/json/get/4J-_i51RV
