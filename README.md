@@ -16,5 +16,5 @@ Routing use done using [React Router](https://reacttraining.com/react-router/)
 
 # Endpoints
 
-Endpoints are saved as JSON files under _public/endpoints_ directory.
+Endpoints are saved as JSON files under _public/endpoints_ directory and are listed in _endpoints.js_
 ProductList can be also accessed as: https://next.json-generator.com/api/json/get/4J-_i51RV

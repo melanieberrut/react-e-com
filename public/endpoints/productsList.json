@@ -13,7 +13,8 @@
     "price": "$316.20",
     "oldPrice": "$579.43",
     "savings": "$69.77",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -30,7 +31,8 @@
     "price": "$352.55",
     "oldPrice": "$604.29",
     "savings": "$87.76",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -47,7 +49,8 @@
     "price": "$202.33",
     "oldPrice": "$458.55",
     "savings": "$47.47",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -64,7 +67,8 @@
     "price": "$260.02",
     "oldPrice": "$452.99",
     "savings": "$24.42",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -81,7 +85,8 @@
     "price": "$359.85",
     "oldPrice": "$896.66",
     "savings": "$92.29",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -98,7 +103,8 @@
     "price": "$237.86",
     "oldPrice": "$404.97",
     "savings": "$62.23",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -115,7 +121,8 @@
     "price": "$295.97",
     "oldPrice": "$567.08",
     "savings": "$25.63",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -132,7 +139,8 @@
     "price": "$364.67",
     "oldPrice": "$971.37",
     "savings": "$68.46",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -149,7 +157,8 @@
     "price": "$107.34",
     "oldPrice": "$635.52",
     "savings": "$7.53",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -166,7 +175,8 @@
     "price": "$118.50",
     "oldPrice": "$572.07",
     "savings": "$7.07",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -183,7 +193,8 @@
     "price": "$389.86",
     "oldPrice": "$824.58",
     "savings": "$82.61",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -200,7 +211,8 @@
     "price": "$237.62",
     "oldPrice": "$541.80",
     "savings": "$49.32",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -217,7 +229,8 @@
     "price": "$371.16",
     "oldPrice": "$914.08",
     "savings": "$96.04",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -234,7 +247,8 @@
     "price": "$115.01",
     "oldPrice": "$763.72",
     "savings": "$26.61",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -251,7 +265,8 @@
     "price": "$103.28",
     "oldPrice": "$876.85",
     "savings": "$71.05",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -268,7 +283,8 @@
     "price": "$123.17",
     "oldPrice": "$974.38",
     "savings": "$19.08",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -285,7 +301,8 @@
     "price": "$181.44",
     "oldPrice": "$583.27",
     "savings": "$13.94",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -302,7 +319,8 @@
     "price": "$327.48",
     "oldPrice": "$954.14",
     "savings": "$34.15",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -319,7 +337,8 @@
     "price": "$348.09",
     "oldPrice": "$973.96",
     "savings": "$63.67",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -336,7 +355,8 @@
     "price": "$261.39",
     "oldPrice": "$443.97",
     "savings": "$62.78",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -353,7 +373,8 @@
     "price": "$137.45",
     "oldPrice": "$874.18",
     "savings": "$31.74",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -370,7 +391,8 @@
     "price": "$283.94",
     "oldPrice": "$557.99",
     "savings": "$71.55",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -387,7 +409,8 @@
     "price": "$292.09",
     "oldPrice": "$916.09",
     "savings": "$32.21",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -403,7 +426,8 @@
     "price": "$216.59",
     "oldPrice": "$451.91",
     "savings": "$41.31",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -420,7 +444,8 @@
     "price": "$224.21",
     "oldPrice": "$683.68",
     "savings": "$98.44",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -437,7 +462,8 @@
     "price": "$226.91",
     "oldPrice": "$712.01",
     "savings": "$59.34",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -454,7 +480,8 @@
     "price": "$350.77",
     "oldPrice": "$752.50",
     "savings": "$68.36",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -471,7 +498,8 @@
     "price": "$104.50",
     "oldPrice": "$511.67",
     "savings": "$67.87",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -488,7 +516,8 @@
     "price": "$298.73",
     "oldPrice": "$544.47",
     "savings": "$69.21",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -505,7 +534,8 @@
     "price": "$381.03",
     "oldPrice": "$731.50",
     "savings": "$14.98",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -522,7 +552,8 @@
     "price": "$250.08",
     "oldPrice": "$852.60",
     "savings": "$9.89",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -539,7 +570,8 @@
     "price": "$262.30",
     "oldPrice": "$808.76",
     "savings": "$4.94",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -555,7 +587,8 @@
     "price": "$176.95",
     "oldPrice": "$886.03",
     "savings": "$82.48",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -571,7 +604,8 @@
     "price": "$366.15",
     "oldPrice": "$844.18",
     "savings": "$18.97",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -588,7 +622,8 @@
     "price": "$277.96",
     "oldPrice": "$424.40",
     "savings": "$71.18",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -605,7 +640,8 @@
     "price": "$153.93",
     "oldPrice": "$809.60",
     "savings": "$42.88",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -622,7 +658,8 @@
     "price": "$354.73",
     "oldPrice": "$546.33",
     "savings": "$80.19",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -639,7 +676,8 @@
     "price": "$250.50",
     "oldPrice": "$848.03",
     "savings": "$88.59",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -655,7 +693,8 @@
     "price": "$235.25",
     "oldPrice": "$453.31",
     "savings": "$59.16",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -672,7 +711,8 @@
     "price": "$222.27",
     "oldPrice": "$858.51",
     "savings": "$60.41",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -688,7 +728,8 @@
     "price": "$157.39",
     "oldPrice": "$771.52",
     "savings": "$65.43",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -705,7 +746,8 @@
     "price": "$132.97",
     "oldPrice": "$416.68",
     "savings": "$89.29",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -722,7 +764,8 @@
     "price": "$212.60",
     "oldPrice": "$605.90",
     "savings": "$93.76",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -739,7 +782,8 @@
     "price": "$129.83",
     "oldPrice": "$958.37",
     "savings": "$37.55",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -756,7 +800,8 @@
     "price": "$224.15",
     "oldPrice": "$665.56",
     "savings": "$40.08",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -773,7 +818,8 @@
     "price": "$303.89",
     "oldPrice": "$585.88",
     "savings": "$75.43",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -789,7 +835,8 @@
     "price": "$159.16",
     "oldPrice": "$787.43",
     "savings": "$67.40",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -806,7 +853,8 @@
     "price": "$379.78",
     "oldPrice": "$701.35",
     "savings": "$18.28",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "l"
   },
   {
@@ -823,7 +871,8 @@
     "price": "$255.87",
     "oldPrice": "$457.35",
     "savings": "$20.06",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -840,7 +889,8 @@
     "price": "$360.37",
     "oldPrice": "$735.46",
     "savings": "$24.81",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "xl"
   },
   {
@@ -857,7 +907,8 @@
     "price": "$306.65",
     "oldPrice": "$595.29",
     "savings": "$51.34",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -874,7 +925,8 @@
     "price": "$185.38",
     "oldPrice": "$962.71",
     "savings": "$48.34",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -890,7 +942,8 @@
     "price": "$151.98",
     "oldPrice": "$625.28",
     "savings": "$4.78",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -907,7 +960,8 @@
     "price": "$106.73",
     "oldPrice": "$787.77",
     "savings": "$25.47",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -924,7 +978,8 @@
     "price": "$290.83",
     "oldPrice": "$812.00",
     "savings": "$25.17",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -941,7 +996,8 @@
     "price": "$146.26",
     "oldPrice": "$669.33",
     "savings": "$68.63",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -958,7 +1014,8 @@
     "price": "$136.90",
     "oldPrice": "$421.06",
     "savings": "$61.52",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -975,7 +1032,8 @@
     "price": "$191.56",
     "oldPrice": "$608.54",
     "savings": "$33.55",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "m"
   },
   {
@@ -992,7 +1050,8 @@
     "price": "$284.84",
     "oldPrice": "$850.88",
     "savings": "$78.38",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -1009,7 +1068,8 @@
     "price": "$394.08",
     "oldPrice": "$850.00",
     "savings": "$73.07",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   },
   {
@@ -1026,7 +1086,8 @@
     "price": "$120.97",
     "oldPrice": "$595.17",
     "savings": "$31.06",
-    "picture": "http://placehold.it/32x32",
+    "thumb": "http://placehold.it/200x200",
+    "images": ["http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600", "http://placehold.it/800x600"],
     "size": "s"
   }
 ]

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ProductTile from "../components/ProductTile/";
+import endpoints from "../endpoints";
 
 class ProductListing extends Component {
   constructor() {
@@ -11,25 +12,22 @@ class ProductListing extends Component {
     };
   }
   getData() {
-    axios.get(`http://localhost:3000/endpoints/productsList.json`).then(response => {
+    axios.get(endpoints.productsList).then(response => {
       const products = response.data;
       this.setState({ products });
     });
   }
-  componentWillMount() {
-    console.log("componentWillMount");
-  }
+
   componentDidMount() {
-    console.log("componentDidMount");
     this.getData();
   }
   render() {
     const ProjectsList = this.state.products.map((product, i) => (
-      <li key={i}>
+      <li key={i} className="col-xs-12 col-sm-4 col-md-3">
         <ProductTile product={product} />
       </li>
     ));
-    return <ul>{ProjectsList}</ul>;
+    return <ul className="row list list-unstyled">{ProjectsList}</ul>;
   }
 }
 
