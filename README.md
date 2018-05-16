@@ -14,7 +14,8 @@ All the new routes should be defined in App.js which is a context for entire app
 Routing use done using [React Router](https://reacttraining.com/react-router/)
 , some [Examples](https://reacttraining.com/react-router/web/example/basic)
 
-# Endpoints
+# API/Endpoints
 
-Endpoints are saved as JSON files under _public/endpoints_ directory and are listed in _endpoints.js_
-ProductList can be also accessed as: https://next.json-generator.com/api/json/get/4J-_i51RV
+Restflu API generated using mockapi.io
+Listed of endpoints _endpoints.js_
+
