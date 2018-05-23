@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import { AppConsumer } from '../../AppContext';
 class Navigation extends Component {
   render() {
     return (
@@ -26,8 +26,19 @@ class Navigation extends Component {
           </NavLink>
         </li>
         <li className="nav-item">
+          <NavLink to="/Favourites" className="nav-link">
+            Favourites
+            <AppConsumer>
+              {context => <span className="badge badge-secondary">{context.state.favCount}</span>}
+            </AppConsumer>
+          </NavLink>
+        </li>
+        <li className="nav-item">
           <NavLink to="/cart" className="nav-link">
             Cart
+            <AppConsumer>
+              {context => <span className="badge badge-secondary">{context.state.cartCount}</span>}
+            </AppConsumer>
           </NavLink>
         </li>
         <li className="nav-item">
