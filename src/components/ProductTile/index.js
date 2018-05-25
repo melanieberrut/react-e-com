@@ -15,7 +15,6 @@ class ProductTile extends Component {
           </h5>
 
           <p className="card-text">{product.descShort}</p>
-
           <Link to={'/product/' + product.id} className="btn btn-primary">
             Go to Product
           </Link>
