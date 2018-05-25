@@ -26,10 +26,10 @@ class Navigation extends Component {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/Favourites" className="nav-link">
-            Favourites
+          <NavLink to="/wishlist" className="nav-link">
+            Wishlist
             <AppConsumer>
-              {context => <span className="badge badge-secondary">{context.state.favCount}</span>}
+              {context => <span className="badge badge-secondary"> {context.state.favCount}</span>}
             </AppConsumer>
           </NavLink>
         </li>

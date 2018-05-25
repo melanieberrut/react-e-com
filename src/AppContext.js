@@ -10,16 +10,16 @@ class AppProvider extends React.Component {
   };
   constructor() {
     super();
-    this.addToFavourites = this.addToFavourites.bind(this);
-    this.removeFromFavourites = this.removeFromFavourites.bind(this);
+    this.addToWishlist = this.addToWishlist.bind(this);
+    this.removeFromWishlist = this.removeFromWishlist.bind(this);
   }
-  addToFavourites() {
-    console.log('addToFavourites');
+  addToWishlist(productId) {
+    console.log('addToFavourites', productId);
     this.setState({ favCount: this.state.favCount + 1 });
     // TODO: Add entire product object to favProducts array
   }
-  removeFromFavourites() {
-    console.log('removeFromFavourites');
+  removeFromWishlist(productId) {
+    console.log('removeFromFavourites', productId);
     this.setState({ favCount: this.state.favCount - 1 });
     // TODO: Remove  product object from favProducts array
   }
@@ -28,8 +28,8 @@ class AppProvider extends React.Component {
       <AppContext.Provider
         value={{
           state: this.state,
-          addToFavourites: this.addToFavourites,
-          removeFromFavourites: this.removeFromFavourites
+          addToWishlist: this.addToWishlist,
+          removeFromWishlist: this.removeFromWishlist
         }}
       >
         {this.props.children}

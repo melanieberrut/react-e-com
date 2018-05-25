@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { AppConsumer } from '../../AppContext';
+import { AddToWishlist } from '../AddToWishlist';
+
 class ProductTile extends Component {
   render() {
     const product = this.props.product;
@@ -9,16 +10,13 @@ class ProductTile extends Component {
       <div className="card">
         <img className="card-img-top" src={product.thumb} alt={product.name} />
         <div className="card-body">
-          <h5 className="card-title">{product.name}</h5>
+          <h5 className="card-title">
+            {product.name}{' '}
+            <AddToWishlist isFavourite={product.isFavourite} productId={product._id} />
+          </h5>
+
           <p className="card-text">{product.descShort}</p>
-          <AppConsumer>
-            {context => (
-              <React.Fragment>
-                <button onClick={context.addToFavourites}> Add to favourites</button>
-                <button onClick={context.removeFromFavourites}> Remove from favourites</button>
-              </React.Fragment>
-            )}
-          </AppConsumer>
+
           <Link to={'/product/' + product._id} className="btn btn-primary">
             Go to Product
           </Link>
