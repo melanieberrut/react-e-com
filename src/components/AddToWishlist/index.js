@@ -5,32 +5,32 @@ class AddToWishlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFav: props.isFavourite
+      isAdded: props.isAdded
     };
   }
 
-  handleClick(isFav, productId, contextMethod) {
-    this.setState({ isFav: !isFav });
+  handleClick(isAdded, productId, contextMethod) {
+    this.setState({ isAdded: !isAdded });
     contextMethod(productId);
   }
   render() {
     const productId = this.props.productId;
-    const isFav = this.state.isFav;
+    const isAdded = this.state.isAdded;
     return (
       <AppConsumer>
         {context => (
           <React.Fragment>
-            {isFav ? (
+            {isAdded ? (
               <button
                 className="badge badge-success"
-                onClick={() => this.handleClick(isFav, productId, context.removeFromWishlist)}
+                onClick={() => this.handleClick(isAdded, productId, context.removeFromWishlist)}
               >
                 Remove from favourites
               </button>
             ) : (
               <button
                 className="badge badge-secondary"
-                onClick={() => this.handleClick(isFav, productId, context.addToWishlist)}
+                onClick={() => this.handleClick(isAdded, productId, context.addToWishlist)}
               >
                 Add to favourites
               </button>

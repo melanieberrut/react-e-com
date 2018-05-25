@@ -1,27 +1,71 @@
 import React from 'react';
+import axios from 'axios';
+import endpoints from './endpoints';
+
 const AppContext = React.createContext();
 const AppConsumer = AppContext.Consumer;
+
 class AppProvider extends React.Component {
   state = {
-    favCount: 0,
-    favProducts: [],
+    wishlistCount: 0,
+    wishlistProducts: [],
     cartCount: 0,
-    isLoggedIn: false
+    isAuth: false
   };
   constructor() {
     super();
     this.addToWishlist = this.addToWishlist.bind(this);
     this.removeFromWishlist = this.removeFromWishlist.bind(this);
   }
+  initWishlist() {
+    axios.get(endpoints.wishlistWidget).then(response => {
+      const products = response.data;
+      this.setState({ wishlistProducts: products });
+      this.setState({ wishlistCount: products.length });
+    });
+  }
+  updateProduct(prodId, isAdded) {
+    const productUrl = endpoints.products + prodId;
+    axios.get(productUrl).then(response => {
+      let product = response.data;
+      product.inWishlist = isAdded;
+
+      axios.put(productUrl, product);
+    });
+  }
+  syncWishlist(productId, addToList) {
+    if (addToList) {
+      // POST wishlistProducts back to API
+      axios.post(endpoints.wishlistWidget, { productId });
+    } else {
+      // remove from list based on productId
+      axios.get(endpoints.wishlistWidget).then(response => {
+        const productsList = response.data;
+        const result = productsList.find(product => product.productId === productId);
+        axios.delete(endpoints.wishlistWidget + result.id);
+      });
+    }
+  }
   addToWishlist(productId) {
-    console.log('addToFavourites', productId);
-    this.setState({ favCount: this.state.favCount + 1 });
-    // TODO: Add entire product object to favProducts array
+    // Add product to wishlistProducts
+    const prodlist = this.state.wishlistProducts;
+    prodlist.push(productId);
+    this.setState({ wishlistProducts: prodlist });
+
+    // Update wishlist count
+    this.setState({ wishlistCount: this.state.wishlistCount + 1 });
+
+    this.syncWishlist(productId, true);
+    this.updateProduct(productId, true);
   }
   removeFromWishlist(productId) {
-    console.log('removeFromFavourites', productId);
-    this.setState({ favCount: this.state.favCount - 1 });
+    this.setState({ wishlistCount: this.state.wishlistCount - 1 });
+    this.updateProduct(productId, false);
+    this.syncWishlist(productId, false);
     // TODO: Remove  product object from favProducts array
+  }
+  componentDidMount() {
+    this.initWishlist();
   }
   render() {
     return (

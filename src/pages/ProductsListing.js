@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import axios from "axios";
-import ProductTile from "../components/ProductTile/";
-import endpoints from "../endpoints";
+import React, { Component } from 'react';
+import axios from 'axios';
+import ProductTile from '../components/ProductTile/';
+import endpoints from '../endpoints';
 
 class ProductListing extends Component {
   constructor() {
@@ -12,7 +12,7 @@ class ProductListing extends Component {
     };
   }
   getData() {
-    axios.get(endpoints.productsList).then(response => {
+    axios.get(endpoints.products).then(response => {
       const products = response.data;
       this.setState({ products });
     });

@@ -1,5 +1,8 @@
+const baseUrl = 'https://5afc8ec5a2326f0014609a6d.mockapi.io/api/v1';
 const endpoints = {
-  productsList: "/endpoints/productsList.json" // or https://next.json-generator.com/api/json/get/4J-_i51RV
+  products: `${baseUrl}/products/`,
+  wishlist: `${baseUrl}/wishlist/`,
+  wishlistWidget: `${baseUrl}/wishlistwidget/`
 };
 
 export default endpoints;

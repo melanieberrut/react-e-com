@@ -11,13 +11,12 @@ class ProductTile extends Component {
         <img className="card-img-top" src={product.thumb} alt={product.name} />
         <div className="card-body">
           <h5 className="card-title">
-            {product.name}{' '}
-            <AddToWishlist isFavourite={product.isFavourite} productId={product._id} />
+            {product.name} <AddToWishlist isAdded={product.inWishlist} productId={product.id} />
           </h5>
 
           <p className="card-text">{product.descShort}</p>
 
-          <Link to={'/product/' + product._id} className="btn btn-primary">
+          <Link to={'/product/' + product.id} className="btn btn-primary">
             Go to Product
           </Link>
         </div>

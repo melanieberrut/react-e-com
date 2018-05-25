@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AppConsumer } from '../../AppContext';
+
 class Navigation extends Component {
   render() {
     return (
@@ -29,7 +30,9 @@ class Navigation extends Component {
           <NavLink to="/wishlist" className="nav-link">
             Wishlist
             <AppConsumer>
-              {context => <span className="badge badge-secondary"> {context.state.favCount}</span>}
+              {context => (
+                <span className="badge badge-secondary"> {context.state.wishlistCount}</span>
+              )}
             </AppConsumer>
           </NavLink>
         </li>
