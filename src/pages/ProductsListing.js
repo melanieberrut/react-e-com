@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ProductTile from '../components/ProductTile/';
+import ProductTile from '../components/ProductTile';
 import endpoints from '../endpoints';
 
-class ProductListing extends Component {
+class ProductsListing extends Component {
   constructor() {
     super();
     this.state = {
@@ -31,4 +31,4 @@ class ProductListing extends Component {
   }
 }
 
-export default ProductListing;
+export default ProductsListing;
