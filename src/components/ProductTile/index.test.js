@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { shallow } from 'enzyme';
 import ProductTile from './index.js';
 
+const fakeProduct = {
+  id: '1',
+  inWishlist: false
+};
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<ProductTile />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  shallow(<ProductTile product={fakeProduct} />);
 });
