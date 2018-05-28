@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 import AddToWishlist from './index.js';
 
-it('renders without crashing', () => {
+it('AddToWishlist renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<AddToWishlist isAdded={true} productId="1" />, div);
   ReactDOM.unmountComponentAtNode(div);
