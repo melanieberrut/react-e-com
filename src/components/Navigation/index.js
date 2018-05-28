@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AppConsumer } from '../../AppContext';
+import WishlistWidget from '../WishlistWidget';
 
 class Navigation extends Component {
   render() {
@@ -29,19 +29,12 @@ class Navigation extends Component {
         <li className="nav-item">
           <NavLink to="/wishlist" className="nav-link">
             Wishlist
-            <AppConsumer>
-              {context => (
-                <span className="badge badge-secondary"> {context.state.wishlistCount}</span>
-              )}
-            </AppConsumer>
+            <WishlistWidget />
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/cart" className="nav-link">
             Cart
-            <AppConsumer>
-              {context => <span className="badge badge-secondary">{context.state.cartCount}</span>}
-            </AppConsumer>
           </NavLink>
         </li>
         <li className="nav-item">
