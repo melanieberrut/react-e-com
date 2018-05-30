@@ -4,6 +4,12 @@ import axios from 'axios';
 import endpoints from '../../endpoints';
 
 class WishlistWidget extends Component {
+  componentDidMount() {
+    this.initWishlist();
+  }
+  testMethod() {
+    return true;
+  }
   initWishlist() {
     axios.get(endpoints.wishlistWidget).then(response => {
       const appContext = this.props.context;
@@ -11,9 +17,6 @@ class WishlistWidget extends Component {
     });
   }
 
-  componentDidMount() {
-    this.initWishlist();
-  }
   render() {
     const { context } = this.props;
     return <span className="badge badge-secondary">{context.state.wishlistCount}</span>;

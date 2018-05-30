@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import ProductsListing from './ProductsListing';
+import ProductsListing from './ProductsListing.js';
 
-it('renders without crashing', () => {});
+it('renders without crashing', () => {
+  shallow(<ProductsListing />);
+});

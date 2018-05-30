@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import AddToWishlist from './index.js';
 
@@ -9,8 +9,5 @@ it('AddToWishlist renders without crashing', () => {
   ReactDOM.render(<AddToWishlist isAdded={true} productId="1" />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
-
-it('handleClick method updates state', () => {
-  // const wrapper = shallow(<AddToWishlist isAdded={true} productId="1" />);
-  // wrapper.instance().handleClick();
-});
+//https://medium.com/@ryandrewjohnson/unit-testing-components-using-reacts-new-context-api-4a5219f4b3fe
+it('handleClick method updates state', () => {});
