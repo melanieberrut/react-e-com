@@ -9,6 +9,7 @@ import ContactUs from './pages/ContactUs';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
+import Wishlist from './pages/Wishlist';
 
 class App extends React.Component {
   render() {
@@ -25,6 +26,7 @@ class App extends React.Component {
               <Route path="/contact-us" component={ContactUs} />
               <Route path="/cart" component={Cart} />
               <Route path="/login" component={Login} />
+              <Route path="/wishlist" component={Wishlist} />
               <Route component={NoMatch} />
             </Switch>
           </div>
