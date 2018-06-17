@@ -15,9 +15,8 @@ const App = () => (
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/pdp" component={ProductDetails} />
+        <Route path="/products/:id" component={ProductDetails} />
         <Route path="/plp" component={ProductsListing} />
-        <Route path="/product/:id" name="product" component={ProductDetails} />
         <Route path="/contact-us" component={ContactUs} />
         <Route path="/cart" component={Cart} />
         <Route path="/login" component={Login} />

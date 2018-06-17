@@ -11,7 +11,7 @@ class Navigation extends Component {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/pdp" className="nav-link">
+          <NavLink to="/products/6" className="nav-link">
             PDP
           </NavLink>
         </li>
