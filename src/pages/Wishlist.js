@@ -38,7 +38,7 @@ class Wishlist extends Component {
   render() {
     const ProjectsList = this.state.products.map((product, i) => (
       <li key={i} className="col-xs-12 col-sm-4 col-md-3">
-        <WishlistItem product={product} />
+        <WishlistItem product={product} addText="Re-add to wishlist" />
       </li>
     ));
     return <ul className="row list list-unstyled">{ProjectsList}</ul>;

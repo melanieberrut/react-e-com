@@ -10,7 +10,8 @@ class AddToWishlist extends Component {
     this.addToWishlist = this.addToWishlist.bind(this);
     this.removeFromWishlist = this.removeFromWishlist.bind(this);
     this.state = {
-      isAdded: props.isAdded
+      isAdded: props.isAdded,
+      addText: props.addText || 'Add to basket'
     };
   }
 
@@ -73,6 +74,7 @@ class AddToWishlist extends Component {
   render() {
     const productId = this.props.productId;
     const isAdded = this.state.isAdded;
+    const addText = this.state.addText;
     return (
       <React.Fragment>
         {isAdded ? (
@@ -87,7 +89,7 @@ class AddToWishlist extends Component {
             className="badge badge-secondary"
             onClick={() => this.handleClick(isAdded, productId, 'add')}
           >
-            Add to favourites
+            {addText}
           </button>
         )}
       </React.Fragment>
