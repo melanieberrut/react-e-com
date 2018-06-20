@@ -12,10 +12,23 @@ class Wishlist extends Component {
     };
   }
   getData() {
+    let products = [];
+    const wishlistProducts = [];
+    const promises = [];
+    const _this = this;
     axios.get(endpoints.wishlistWidget).then(response => {
-      const products = response.data;
-      console.log('products', products);
-      this.setState({ products });
+      products = response.data;
+      if (products) {
+        products.map(function(product) {
+          promises.push(axios.get(endpoints.products + product.productId));
+        });
+        axios.all(promises).then(function(results) {
+          results.forEach(function(response) {
+            wishlistProducts.push(response.data);
+          });
+          _this.setState({ products: wishlistProducts });
+        });
+      }
     });
   }
 
@@ -24,7 +37,7 @@ class Wishlist extends Component {
   }
   render() {
     const ProjectsList = this.state.products.map((product, i) => (
-      <li key={i} className="col-xs-12">
+      <li key={i} className="col-xs-12 col-sm-4 col-md-3">
         <WishlistItem product={product} />
       </li>
     ));
