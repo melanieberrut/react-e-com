@@ -1,0 +1,9 @@
+{
+  "products": [{
+    "id": "1",
+    "name": "product name 1",
+    "thumb": "thumb.jpeg",
+    "inWishlist": true,
+    "descShort": "lorem ipsum"
+  }]
+}

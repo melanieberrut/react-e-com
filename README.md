@@ -19,3 +19,6 @@ Routing use done using [React Router](https://reacttraining.com/react-router/)
 Restful API generated using mockapi.io, it will help us to make AJAX calls to retrive data such us products list, product details or user info
 Listed of endpoints can be found in _endpoints.js_
 
+# Testing
+To test async calls we use `__mocks__` directory.  
+

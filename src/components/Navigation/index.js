@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import WishlistWidget from '../WishlistWidget';
 
 class Navigation extends Component {
   render() {
@@ -23,6 +24,12 @@ class Navigation extends Component {
         <li className="nav-item">
           <NavLink to="/contact-us" className="nav-link">
             Contact Us
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/wishlist" className="nav-link">
+            Wishlist
+            <WishlistWidget />
           </NavLink>
         </li>
         <li className="nav-item">
