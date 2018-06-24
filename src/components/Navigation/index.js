@@ -38,8 +38,13 @@ class Navigation extends Component {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/login" className="nav-link">
-            Login
+          <NavLink to="/signin" className="nav-link">
+            Sign In
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/signup" className="nav-link">
+            Sign up
           </NavLink>
         </li>
       </ul>
