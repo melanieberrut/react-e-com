@@ -1,9 +1,9 @@
 import React from 'react';
-import { shallow, } from 'enzyme';
+import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import ProductDetails from './ProductDetails.js';
 
-describe('<ProductDetails />', () => {
-	it('renders without crashing', () => {
-	  shallow(<ProductDetails  match={{ params: {id: "7"}, isExact: true, path: "", url: ""}} />);
-	});
+
+it('renders without crashing', () => {
+  shallow(<ProductDetails match={{ params: {id: "1"} }} />);
 });

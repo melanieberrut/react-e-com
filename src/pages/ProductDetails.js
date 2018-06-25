@@ -35,7 +35,9 @@ class ProductDetails extends Component {
 		axios.get(endpoints.products + id).then(response => {
 			const productInfo = response.data;
 			this.setState({ productInfo });
-			this.setState({ mainImage: productInfo.images[0] });
+			if (productInfo !== undefined && productInfo.length !== 0) {
+				this.setState({ mainImage: productInfo.images[0] })
+			}
 		});
 	}
 
@@ -78,8 +80,9 @@ class ProductDetails extends Component {
 
 						<div className="col-12 col-sm-6 col-lg-5">
 							{/* START Product Images */}
-
-							<img src={ this.state.mainImage } className="img-fluid" alt={ product.name } />
+							
+							{ this.state.mainImage && <img src={ this.state.mainImage } className="img-fluid" alt={ product.name } /> }
+							
 
 							<ul className="list-inline row mt-2">
 								{
@@ -161,6 +164,10 @@ class ProductDetails extends Component {
 	}
 
 }
+
+ProductDetails.defaultProps = {
+  match: '1'
+};
 
 ProductDetails.propTypes = {
   match: PropTypes.object
