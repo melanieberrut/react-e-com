@@ -3,6 +3,8 @@ import axios from "axios";
 import PropTypes from 'prop-types';
 import endpoints from "../endpoints";
 import content from "../content";
+import AddToCart from '../components/AddToCart';
+import AddToWishlist from '../components/AddToWishlist';
 
 class ProductDetails extends Component {
 
@@ -22,8 +24,7 @@ class ProductDetails extends Component {
 	// 
 
 	componentDidMount() {
-		const match = this.props.match;
-		const prodId = match.params.id;
+		const prodId = this.props.match.params.id;
 		this.getData(prodId);
 	}
 
@@ -110,6 +111,8 @@ class ProductDetails extends Component {
 							
 							<p className="lead">{ product.descShort }</p>
 
+							<AddToWishlist isAdded={ product.inWishlist } productId={ product.id } />
+
 							<div className="mt-4 mb-2">
 
 								<div className="row align-items-end mb-2">
@@ -143,9 +146,7 @@ class ProductDetails extends Component {
 							</div>
 
 							<div className="mt-3 mb-2 buttons">
-								<button type="button" className="btn btn-primary btn-block btn-lg">
-									{content.addtocart}
-								</button>
+								<AddToCart productDetails={ {"id": product.id, "name": product.name, "price": product.price, "qty": this.state.qty} } />
 							</div>
 
 							{/* END Product Details */}

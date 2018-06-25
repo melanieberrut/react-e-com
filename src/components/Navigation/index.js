@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import WishlistWidget from '../WishlistWidget';
+import AddToCartWidget from '../AddToCartWidget';
 
 class Navigation extends Component {
   render() {
@@ -35,6 +36,7 @@ class Navigation extends Component {
         <li className="nav-item">
           <NavLink to="/cart" className="nav-link">
             Cart
+            <AddToCartWidget />
           </NavLink>
         </li>
         <li className="nav-item">
