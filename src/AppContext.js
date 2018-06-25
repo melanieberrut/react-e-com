@@ -6,7 +6,8 @@ const AppConsumer = AppContext.Consumer;
 class AppProvider extends React.Component {
   state = {
     wishlistCount: 0,
-    wishlistProducts: []
+    wishlistProducts: [],
+    isAuth: false
   };
 
   updateWishlist = products => {
@@ -14,12 +15,16 @@ class AppProvider extends React.Component {
     this.setState({ wishlistCount: products.length });
   };
 
+  toggleIsAuth = isAuth => {
+    this.setState({ isAuth });
+  };
   render() {
     return (
       <AppContext.Provider
         value={{
           state: this.state,
-          updateWishlist: this.updateWishlist
+          updateWishlist: this.updateWishlist,
+          toggleIsAuth: this.toggleIsAuth
         }}
       >
         {this.props.children}

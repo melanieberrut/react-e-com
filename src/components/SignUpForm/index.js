@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { auth } from '../../firebase';
-
+import { AppConsumer } from '../../AppContext';
 const INITIAL_STATE = {
   username: '',
   email: '',
@@ -22,10 +22,12 @@ class SignUpForm extends Component {
   onSubmit = event => {
     const { email, passwordOne } = this.state;
     const { history } = this.props;
+    const appContext = this.props.context;
     auth
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         this.setState(() => ({ ...INITIAL_STATE }));
+        appContext.toggleIsAuth(true);
         history.push('/'); // On successful sign up redirect to hompe page
       })
       .catch(error => {
@@ -42,6 +44,7 @@ class SignUpForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
+        {error && <p className="alert alert-danger">{error.message}</p>}
         <div className="form-group">
           <label htmlFor="userName">Username:</label>
           <input
@@ -93,11 +96,11 @@ class SignUpForm extends Component {
         <button type="submit" disabled={isInvalid} className="btn btn-primary">
           Sign Up
         </button>
-
-        {error && <p>{error.message}</p>}
       </form>
     );
   }
 }
 
-export default SignUpForm;
+export default props => (
+  <AppConsumer>{context => <SignUpForm {...props} context={context} />}</AppConsumer>
+);

@@ -17,6 +17,7 @@ class Header extends Component {
             </span>
           </h1>
         </header>
+
         <Navigation />
       </div>
     );

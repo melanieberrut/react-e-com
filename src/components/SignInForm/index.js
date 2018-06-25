@@ -5,7 +5,7 @@ class SignInForm extends Component {
     return (
       <form>
         <div className="form-group">
-          <label for="userLogin">User name:</label>
+          <label htmlFor="userLogin">User name:</label>
           <input
             id="userLogin"
             type="text"
@@ -15,7 +15,7 @@ class SignInForm extends Component {
           />
         </div>
         <div className="form-group">
-          <label for="userPassword">Password:</label>
+          <label htmlFor="userPassword">Password:</label>
           <input
             id="userPassword"
             type="password"

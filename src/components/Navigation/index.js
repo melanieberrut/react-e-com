@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import WishlistWidget from '../WishlistWidget';
+import { AppConsumer } from '../../AppContext';
 
 class Navigation extends Component {
   render() {
+    const { context } = this.props;
+
     return (
       <ul className="nav nav-tabs">
         <li className="nav-item">
@@ -37,19 +40,33 @@ class Navigation extends Component {
             Cart
           </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink to="/signin" className="nav-link">
-            Sign In
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/signup" className="nav-link">
-            Sign up
-          </NavLink>
-        </li>
+
+        {context.state.isAuth ? (
+          <li className="nav-item">
+            <NavLink to="/myaccount" className="nav-link">
+              My Account
+            </NavLink>
+            or loggout
+          </li>
+        ) : (
+          <React.Fragment>
+            <li className="nav-item">
+              <NavLink to="/signin" className="nav-link">
+                Sign In
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/signup" className="nav-link">
+                Sign up
+              </NavLink>
+            </li>
+          </React.Fragment>
+        )}
       </ul>
     );
   }
 }
 
-export default Navigation;
+export default props => (
+  <AppConsumer>{context => <Navigation {...props} context={context} />}</AppConsumer>
+);
