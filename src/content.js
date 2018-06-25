@@ -6,5 +6,6 @@ const content = {
 	"addtofavourites": "⭐️ Add to Favourites",
 	"removefromfavourites": "⭐️ Remove from Favourites",
 	"productidpreffix": "#",
+	"currency": "£",
 }
 export default content;

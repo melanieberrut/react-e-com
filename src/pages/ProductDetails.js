@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import PropTypes from 'prop-types';
 import endpoints from "../endpoints";
 import content from "../content";
 
@@ -11,27 +12,26 @@ class ProductDetails extends Component {
 			productInfo: [],
 			mainImage: "",
 			qty: 1,
-			cart: []
 		};
 
 		this.handleQtyChange = this.handleQtyChange.bind(this);
 		this.handleShowImage = this.handleShowImage.bind(this);
-		this.handleAddToCart = this.handleAddToCart.bind(this);
 	}
 
 	// Lifecycles
 	// 
 
 	componentDidMount() {
-		this.getData();
+		const match = this.props.match;
+		const prodId = match.params.id;
+		this.getData(prodId);
 	}
 
 	// Data
 	// 
 
-	getData() {
-		const prodId = this.props.match.params.id;
-		axios.get(endpoints.productsDetail + prodId).then(response => {
+	getData(id) {
+		axios.get(endpoints.products + id).then(response => {
 			const productInfo = response.data;
 			this.setState({ productInfo });
 			this.setState({ mainImage: productInfo.images[0] });
@@ -59,97 +59,98 @@ class ProductDetails extends Component {
 		this.setState({ mainImage: images[key] });
     }
 
-	handleAddToCart = (key) => {
-		console.log('Add to cart');
-    }
-
-
 	// Render
 	// 
-
+	
 	render() {
 
 		const product = this.state.productInfo;
-
 		let minusDisabled = this.state.qty === 1;
-
-
-		// TODO: On click of add/remove favs
-		let fav = product.inWishlist 
-				? <button type="button" className="btn btn-info">{ content.removefromfavourites }</button>
-				: <button type="button" className="btn btn-info">{ content.addtofavourites }</button>
-	
+		
 		return (
 			<div className="container">
 				<div className="mt-4 mb-4">
-				{ this.state && this.state.productInfo &&
-				<div className="row align-items-start justify-content-start">
+				{ product !== undefined && product.length !== 0 &&
 
-					<div className="col-12 col-sm-6 col-lg-5">
-						{/* START Product Images */}
+					<div className="row align-items-start justify-content-start">
+	
 
-						<img src={ this.state.mainImage } className="img-fluid" alt={ product.name } />
+						<div className="col-12 col-sm-6 col-lg-5">
+							{/* START Product Images */}
 
-						<ul className="list-inline row mt-2">
-							{
-								product.images !== undefined && 
-								product.images.map((pdt, i) => (
-									<li key={i} className="col-2 col-sm-3 col-lg-3 mb-2">
-										<img 
-										src={pdt} 
-										className="img-fluid rounded cursor-pointer" 
-										onClick={ () => this.handleShowImage(i) }
-										alt={ product.name + ' ' + i } />
-									</li>
-								))
-							}
-						</ul>
+							<img src={ this.state.mainImage } className="img-fluid" alt={ product.name } />
 
-						{/* END Product Images */}
-					</div>
+							<ul className="list-inline row mt-2">
+								{
+									product.images !== undefined && 
+									product.images.map((pdt, i) => (
+										<li key={i} className="col-2 col-sm-3 col-lg-3 mb-2">
+											<img 
+												src={pdt} 
+												className="img-fluid rounded cursor-pointer" 
+												onClick={ () => this.handleShowImage(i) }
+												alt={ product.name + ' ' + i } />
+										</li>
+									))
+								}
+							</ul>
 
-					<div className="col-12 col-sm-6 col-lg-7">
-						{/* START Product Details*/}
+							{/* END Product Images */}
+						</div>
 
-						<h1 className="display-4">{ product.name }</h1>
-						<span className="small">{ content.productidpreffix }{ product.id }</span>
-						<p className="lead">{ product.descShort }</p>
-						<p>is in Wishlist: <span>{ product.inWishlist ? "Yes" : "No" }</span></p>
+						<div className="col-12 col-sm-6 col-lg-7">
+							{/* START Product Details*/}
 
-						{ fav }
-						
-						<div className="mt-4 mb-2">
+							<h1 className="display-4">{ product.name }</h1>
+
+							<span className="product-code small">
+								<span className="product-code__label ">{ content.productidpreffix }</span>
+								<span className="product-code__value">{ product.id }</span>
+							</span>
 							
-							<p><strong>{ content.colour }</strong>: <span>{ product.color }</span></p>
+							<p className="lead">{ product.descShort }</p>
 
-							<div className="input-group">
-								<div className="input-group-prepend">
-									<button 
-										title={ content.add }
-										className="btn btn-lg btn-dark" 
-										type="button"
-										disabled={ minusDisabled } 
-										onClick={ this.counterDecrease }>-</button>
+							<div className="mt-4 mb-2">
+
+								<div className="row align-items-end mb-2">
+									<div className="col-12 col-lg-6"><strong>{ content.colour }</strong>: <span>{ product.color }</span></div>
+									<div className="col-12 col-lg-6 text-lg-right">
+										<span className="display-4">
+											<span className="">{ content.currency }</span>{ product.price }
+										</span>
+									</div>
 								</div>
-								<input type="number" className="form-control" value={ this.state.qty } onChange={ (e) => {this.handleQtyChange(e)} } />
-								<div className="input-group-append">
-									<button 
-										title={ content.remove }
-										className="btn btn-lg btn-dark" 
-										type="button"
-										onClick={ this.counterIncrement }>+</button>
+
+								<div className="input-group">
+									<div className="input-group-prepend">
+										<button 
+											title={ content.add }
+											className="btn btn-lg btn-dark" 
+											type="button"
+											disabled={ minusDisabled } 
+											onClick={ this.counterDecrease }>-</button>
+									</div>
+									<input type="number" className="form-control" value={ this.state.qty } onChange={ (e) => {this.handleQtyChange(e)} } />
+									<div className="input-group-append">
+										<button 
+											title={ content.remove }
+											className="btn btn-lg btn-dark" 
+											type="button"
+											onClick={ this.counterIncrement }>+</button>
+									</div>
 								</div>
+
 							</div>
 
-						</div>
+							<div className="mt-3 mb-2 buttons">
+								<button type="button" className="btn btn-primary btn-block btn-lg">
+									{content.addtocart}
+								</button>
+							</div>
 
-						<div className="mt-3 mb-2 buttons">
-							<button type="button" className="btn btn-primary btn-block btn-lg" onClick={ (e) => this.handleAddToCart(e) }>{ content.addtocart }</button>
+							{/* END Product Details */}
 						</div>
-
-						{/* END Product Details */}
 					</div>
-				</div>
 				}
 				</div>
 			</div>
@@ -159,5 +160,9 @@ class ProductDetails extends Component {
 	}
 
 }
+
+ProductDetails.propTypes = {
+  match: PropTypes.object
+};
 
 export default ProductDetails;

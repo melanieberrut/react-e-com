@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, } from 'enzyme';
+import ProductDetails from './ProductDetails.js';
 
-import ProductDetails from './ProductDetails';
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<ProductDetails />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('<ProductDetails />', () => {
+	it('renders without crashing', () => {
+	  shallow(<ProductDetails  match={{ params: {id: "7"}, isExact: true, path: "", url: ""}} />);
+	});
 });
