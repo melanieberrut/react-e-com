@@ -1,0 +1,16 @@
+{
+    "id": "1",
+    "price": "318.00",
+    "name": "Awesome Steel Chicken",
+    "descShort": "connect Florida methodologies",
+    "color": "green",
+    "inWishlist": true,
+    "thumb": "http://placehold.it/800x600",
+    "images": [
+      "http://placehold.it/800x600?text=Image+1",
+      "http://placehold.it/800x600?text=Image+2",
+      "http://placehold.it/800x600?text=Image+3",
+      "http://placehold.it/800x600?text=Image+4",
+      "http://placehold.it/800x600?text=Image+5"
+    ]
+}
