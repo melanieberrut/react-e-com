@@ -1,8 +1,10 @@
 import { product } from './product.json';
 import { products } from './products.json';
+import { wishlistwidget } from './wishlistwidgets.json';
 import endpoints from '../endpoints';
 const PRODUCTS_ENDPOINT = endpoints.products;
-const PRODUCTID_ENDPOINT = endpoints.products + "1";
+const PRODUCTID_ENDPOINT = endpoints.products + '1';
+const WISHLIST_WIDGET_ENDPOINT = endpoints.wishlistWidget;
 
 module.exports = {
   get: jest.fn(url => {
@@ -14,6 +16,10 @@ module.exports = {
       case PRODUCTID_ENDPOINT:
         return Promise.resolve({
           data: product
+        });
+      case WISHLIST_WIDGET_ENDPOINT:
+        return Promise.resolve({
+          data: wishlistwidget
         });
     }
   })

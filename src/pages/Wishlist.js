@@ -21,13 +21,16 @@ class Wishlist extends Component {
       if (products) {
         products.map(function(product) {
           promises.push(axios.get(endpoints.products + product.productId));
+          return true;
         });
-        axios.all(promises).then(function(results) {
-          results.forEach(function(response) {
-            wishlistProducts.push(response.data);
+        if (axios.all) {
+          axios.all(promises).then(function(results) {
+            results.forEach(function(response) {
+              wishlistProducts.push(response.data);
+            });
+            _this.setState({ products: wishlistProducts });
           });
-          _this.setState({ products: wishlistProducts });
-        });
+        }
       }
     });
   }

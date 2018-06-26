@@ -11,7 +11,7 @@ class AddToWishlist extends Component {
     this.removeFromWishlist = this.removeFromWishlist.bind(this);
     this.state = {
       isAdded: props.isAdded,
-      addText: props.addText || 'Add to basket'
+      addText: props.addText || 'Add to wishlist'
     };
   }
 
