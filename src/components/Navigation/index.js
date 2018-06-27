@@ -1,52 +1,39 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import WishlistWidget from '../WishlistWidget';
-import AddToCartWidget from '../AddToCartWidget';
+import NavigationList from '../NavigationList';
 
 class Navigation extends Component {
-  render() {
-    return (
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <NavLink to="/" className="nav-link" exact>
-            Home Page
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/products/6" className="nav-link">
-            PDP
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/plp" className="nav-link">
-            PLP
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/contact-us" className="nav-link">
-            Contact Us
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/wishlist" className="nav-link">
-            Wishlist
-            <WishlistWidget />
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/cart" className="nav-link">
-            Cart
-            <AddToCartWidget />
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/login" className="nav-link">
-            Login
-          </NavLink>
-        </li>
-      </ul>
-    );
-  }
+	constructor() {
+		super();
+		this.state = {
+			isMobileNavOpened: false,
+			isSearchOpened: false,
+		};
+	}
+
+	render() {
+		let isNavOpened = this.state.isMobileNavOpened;
+
+		return (
+
+			<div className="container">
+				<div className="row position-relative justify-content-end">
+					<nav className="navbar navbar-lightest navbar--main navbar-expand-lg col-12 col-lg-12">
+
+						<div id="navbarNav" 
+							className={
+								isNavOpened
+									? `navbar-collapse collapse show mt-2 mb-2`
+									: `navbar-collapse collapse`
+							}>
+							<NavigationList modifierParentClass="nav-fill" />
+						</div>
+
+					</nav>
+				</div>
+			</div>
+
+		);
+	}
 }
 
 export default Navigation;

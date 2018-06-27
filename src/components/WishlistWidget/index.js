@@ -19,7 +19,7 @@ class WishlistWidget extends Component {
 
   render() {
     const { context } = this.props;
-    return <span className="badge badge-secondary">{context.state.wishlistCount}</span>;
+    return <span className="btn-link__badge badge badge-pill badge-secondary">{context.state.wishlistCount}</span>;
   }
 }
 // In order to be able to acces App Context we do following,
