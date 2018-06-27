@@ -29,6 +29,7 @@ class App extends React.Component {
                   <Route path="/contact-us" component={ContactUs} />
                   <Route path="/cart" component={Cart} />
                   <Route path="/login" component={Login} />
+                  <Route path="/wishlist" component={Wishlist} />
                   <Route component={NoMatch} />
                 </Switch>
               </div>
