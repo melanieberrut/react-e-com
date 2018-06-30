@@ -5,7 +5,7 @@ class AddToCartWidget extends Component {
 
   render() {
     const { context } = this.props;
-    return <span className="badge badge-secondary">{context.state.cartCount}</span>;
+    return <span className="btn-link__badge badge badge-pill badge-secondary">{context.state.cartCount}</span>;
   }
 }
 
