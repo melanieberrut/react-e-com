@@ -7,7 +7,12 @@ class HeaderCartLink extends Component {
   render() {
     return (
       <NavLink to="/cart" className="cart-btn btn btn-link btn-link--header ml-3">
-        <img src={iconCart} className="cart-btn__icon icon icon--header" alt="Cart" aria-label="Cart" /> 
+        <img
+          src={iconCart}
+          className="cart-btn__icon icon icon--header"
+          alt="Cart"
+          aria-label="Cart"
+        />
         <span className="sr-only">Cart</span>
         <AddToCartWidget />
       </NavLink>

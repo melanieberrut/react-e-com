@@ -12,7 +12,6 @@ import OffsideMainMenu from '../OffsideMainMenu';
 import iconMenu from '../../images/icon-navicon.svg';
 
 class Header extends Component {
-
 	constructor() {
 		super();
 		this.state = {
@@ -36,7 +35,6 @@ class Header extends Component {
 	}
 
 	render() {
-		
 		let isNavOpened = this.state.isMobileNavOpened;
 
 		return (
@@ -63,14 +61,22 @@ class Header extends Component {
 										<HeaderAccountLink />
 									</div>
 									<div className="d-inline-block d-lg-none">
-										<a onClick={ this.handleHamburgerButton } className="nav-btn btn btn-link ml-3">
-											<img src={iconMenu} className="nav-btn__icon icon icon--header" alt="Menu" aria-label="Menu" /> 
+										<a onClick={this.handleHamburgerButton} className="nav-btn btn btn-link ml-3">
+											<img
+												src={iconMenu}
+												className="nav-btn__icon icon icon--header"
+												alt="Menu"
+												aria-label="Menu"
+											/>
 											<span className="sr-only">Menu</span>
 										</a>
 									</div>
 								</div>
 							</div>
-							<OffsideMainMenu isNavOpened={ isNavOpened } handleClickCloseMenu={ this.handleClickCloseMenu } />
+							<OffsideMainMenu
+								isNavOpened={isNavOpened}
+								handleClickCloseMenu={this.handleClickCloseMenu}
+							/>
 						</div>
 					</nav>
 				</header>
