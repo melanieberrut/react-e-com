@@ -19,21 +19,21 @@ class App extends React.Component {
         <Router>
           <div className="app-container">
             <Header />
-            <div className="app-body">
-            <div className="container">
-              <div className="row no-gutters">
-                <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/products/:id" component={ProductDetails} />
-                  <Route path="/plp" component={ProductsListing} />
-                  <Route path="/contact-us" component={ContactUs} />
-                  <Route path="/cart" component={Cart} />
-                  <Route path="/login" component={Login} />
-                  <Route path="/wishlist" component={Wishlist} />
-                  <Route component={NoMatch} />
-                </Switch>
+            <div className="app-body clearfix">
+              <div className="container">
+                <div className="row no-gutters">
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/products/:id" component={ProductDetails} />
+                    <Route path="/plp" component={ProductsListing} />
+                    <Route path="/contact-us" component={ContactUs} />
+                    <Route path="/cart" component={Cart} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/wishlist" component={Wishlist} />
+                    <Route component={NoMatch} />
+                  </Switch>
+                </div>
               </div>
-            </div>
             </div>
             <Footer />
           </div>
