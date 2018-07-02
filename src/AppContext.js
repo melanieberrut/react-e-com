@@ -17,7 +17,10 @@ class AppProvider extends React.Component {
   };
 
   updateCart = products => {
-    this.setState({ cartCount: products.length });
+    let cartCount = products
+      .map((pdt, i) => pdt.qty)
+      .reduce((accumulator, currentValue) => accumulator + currentValue);
+    this.setState({ cartCount });
     this.setState({ cartProducts: products });
   };
 

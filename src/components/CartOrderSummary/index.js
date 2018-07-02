@@ -31,8 +31,8 @@ class CartOrderSummary extends Component {
 
   calculateTotals(cartProds) {
     // Total prices
-    let prices = cartProds.map((pdt, i) => pdt.qty * pdt.price);
-    let totalPrices = prices
+    let totalPrices = cartProds
+      .map((pdt, i) => pdt.qty * pdt.price)
       .reduce((accumulator, currentValue) => accumulator + currentValue)
       .toFixed(2);
     this.setState(prevState => ({ totalPrices }));
