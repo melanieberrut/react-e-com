@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import WishlistWidget from '../WishlistWidget';
 import { AppConsumer } from '../../AppContext';
-
+import SignOutButton from '../SignOut';
 class Navigation extends Component {
   render() {
     const { context } = this.props;
@@ -41,12 +41,13 @@ class Navigation extends Component {
           </NavLink>
         </li>
 
-        {context.state.isAuth ? (
+        {context.state.authUser ? (
           <li className="nav-item">
             <NavLink to="/myaccount" className="nav-link">
               My Account
             </NavLink>
-            or loggout
+            or
+            <SignOutButton />
           </li>
         ) : (
           <React.Fragment>
