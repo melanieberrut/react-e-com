@@ -1,73 +1,35 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import WishlistWidget from '../WishlistWidget';
-import { AppConsumer } from '../../AppContext';
-import SignOutButton from '../SignOut';
+import NavigationList from '../NavigationList';
+
 class Navigation extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isMobileNavOpened: false,
+      isSearchOpened: false
+    };
+  }
+
   render() {
-    const { context } = this.props;
+    let isNavOpened = this.state.isMobileNavOpened;
 
     return (
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <NavLink to="/" className="nav-link" exact>
-            Home Page
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/pdp" className="nav-link">
-            PDP
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/plp" className="nav-link">
-            PLP
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/contact-us" className="nav-link">
-            Contact Us
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/wishlist" className="nav-link">
-            Wishlist
-            <WishlistWidget />
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/cart" className="nav-link">
-            Cart
-          </NavLink>
-        </li>
-
-        {context.state.authUser ? (
-          <li className="nav-item">
-            <NavLink to="/myaccount" className="nav-link">
-              My Account
-            </NavLink>
-            or
-            <SignOutButton />
-          </li>
-        ) : (
-          <React.Fragment>
-            <li className="nav-item">
-              <NavLink to="/signin" className="nav-link">
-                Sign In
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/signup" className="nav-link">
-                Sign up
-              </NavLink>
-            </li>
-          </React.Fragment>
-        )}
-      </ul>
+      <div className="container">
+        <div className="row position-relative justify-content-end">
+          <nav className="navbar navbar-lightest navbar--main navbar-expand-lg col-12 col-lg-12">
+            <div
+              id="navbarNav"
+              className={
+                isNavOpened ? `navbar-collapse collapse show mt-2 mb-2` : `navbar-collapse collapse`
+              }
+            >
+              <NavigationList modifierParentClass="nav-fill" />
+            </div>
+          </nav>
+        </div>
+      </div>
     );
   }
 }
 
-export default props => (
-  <AppConsumer>{context => <Navigation {...props} context={context} />}</AppConsumer>
-);
+export default Navigation;

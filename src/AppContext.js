@@ -8,7 +8,9 @@ class AppProvider extends React.Component {
   state = {
     wishlistCount: 0,
     wishlistProducts: [],
-    authUser: false
+    authUser: false,
+    cartCount: 0,
+    cartProducts: []
   };
 
   updateWishlist = products => {
@@ -25,13 +27,19 @@ class AppProvider extends React.Component {
     });
   }
 
+  updateCart = products => {
+    this.setState({ cartCount: products.length });
+    this.setState({ cartProducts: products });
+  };
+
   render() {
     return (
       <AppContext.Provider
         value={{
           state: this.state,
           updateWishlist: this.updateWishlist,
-          toggleIsAuth: this.toggleIsAuth
+          toggleIsAuth: this.toggleIsAuth,
+          updateCart: this.updateCart
         }}
       >
         {this.props.children}
