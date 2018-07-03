@@ -14,22 +14,28 @@ class MiniBasket extends Component {
         .reduce((accumulator, currentValue) => accumulator + currentValue)
         .toFixed(2);
       return (
-        <div className="mini-basket box-shadow box-shadow--1 p-4">
-          <h2 className="col-12 text-left">{content.minibasket.title}</h2>
-          <div className="table-two">
-            <div className="table-two__contents col-12">
-              {context.state.cartProducts.map((e, index) => (
-                <MiniBasketEntry key={index} entry={e} />
-              ))}
-            </div>
-            <div className="table-two__footers col-12 pt-2 pb-2 table-two__footer--border-dark">
-              <div className="table-two__content row">
-                <div className="table-two__col col-6 text-left">
-                  {content.minibasket.totalslabel}
-                </div>
-                <div className="table-two__col col-6 text-right">
-                  {content.currency}
-                  {totalPrices}
+        <div className="mini-basket ">
+          <div
+            onClick={() => this.props.toggleMiniBasket()}
+            className="mini-basket__overlay overlay-click"
+          />
+          <div className="mini-basket__content box-shadow box-shadow--1 p-4">
+            <h2 className="col-12 text-left">{content.minibasket.title}</h2>
+            <div className="table-two">
+              <div className="table-two__contents col-12">
+                {context.state.cartProducts.map((e, index) => (
+                  <MiniBasketEntry key={index} entry={e} />
+                ))}
+              </div>
+              <div className="table-two__footers col-12 pt-2 pb-2 table-two__footer--border-dark">
+                <div className="table-two__content row">
+                  <div className="table-two__col col-6 text-left">
+                    {content.minibasket.totalslabel}
+                  </div>
+                  <div className="table-two__col col-6 text-right">
+                    {content.currency}
+                    {totalPrices}
+                  </div>
                 </div>
               </div>
             </div>
@@ -38,9 +44,15 @@ class MiniBasket extends Component {
       );
     } else {
       return (
-        <div className="mini-basket mini-basket--empty box-shadow box-shadow--1 p-4">
-          <h2 className="text-left">{content.minibasket.title}</h2>
-          <p className="text-left">{content.minibasket.empty}</p>
+        <div className="mini-basket mini-basket--empty ">
+          <div
+            onClick={() => this.props.toggleMiniBasket()}
+            className="mini-basket__overlay overlay-click"
+          />
+          <div className="mini-basket__content box-shadow box-shadow--1 p-4">
+            <h2 className="text-left">{content.minibasket.title}</h2>
+            <p className="text-left">{content.minibasket.empty}</p>
+          </div>
         </div>
       );
     }

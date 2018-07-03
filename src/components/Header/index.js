@@ -20,24 +20,17 @@ class Header extends Component {
 			isMiniBasketOpened: false
 		};
 
-		this.handleHamburgerButton = this.handleHamburgerButton.bind(this);
-		this.handleClickCloseMenu = this.handleClickCloseMenu.bind(this);
-		this.handleMiniBasketButton = this.handleMiniBasketButton.bind(this);
+		this.toggleHamburgerMenu = this.toggleHamburgerMenu.bind(this);
+		this.toggleMiniBasket = this.toggleMiniBasket.bind(this);
 	}
 
-	handleMiniBasketButton() {
+	toggleMiniBasket() {
 		this.setState(prevState => ({
 			isMiniBasketOpened: !prevState.isMiniBasketOpened
 		}));
 	}
 
-	handleHamburgerButton() {
-		this.setState(prevState => ({
-			isMobileNavOpened: !prevState.isMobileNavOpened
-		}));
-	}
-
-	handleClickCloseMenu() {
+	toggleHamburgerMenu() {
 		this.setState(prevState => ({
 			isMobileNavOpened: !prevState.isMobileNavOpened
 		}));
@@ -66,14 +59,14 @@ class Header extends Component {
 								<div className="col-9 col-sm-9 col-lg-4 text-right">
 									<HeaderCartLink
 										isMiniBasketOpened={this.state.isMiniBasketOpened}
-										handleMiniBasketButton={this.handleMiniBasketButton}
+										toggleMiniBasket={this.toggleMiniBasket}
 									/>
 									<div className="d-none d-sm-inline-block">
 										<HeaderWishlistLink />
 										<HeaderAccountLink />
 									</div>
 									<div className="d-inline-block d-lg-none">
-										<a onClick={this.handleHamburgerButton} className="nav-btn btn btn-link ml-3">
+										<a onClick={this.toggleHamburgerMenu} className="nav-btn btn btn-link ml-3">
 											<img
 												src={iconMenu}
 												className="nav-btn__icon icon icon--header"
@@ -84,12 +77,14 @@ class Header extends Component {
 										</a>
 									</div>
 
-									{this.state.isMiniBasketOpened && <MiniBasket />}
+									{this.state.isMiniBasketOpened && (
+										<MiniBasket toggleMiniBasket={this.toggleMiniBasket} />
+									)}
 								</div>
 							</div>
 							<OffsideMainMenu
 								isNavOpened={isNavOpened}
-								handleClickCloseMenu={this.handleClickCloseMenu}
+								toggleHamburgerMenu={this.toggleHamburgerMenu}
 							/>
 						</div>
 					</nav>

@@ -7,7 +7,7 @@ class HeaderCartLink extends Component {
   render() {
     return (
       <div
-        onClick={e => this.props.handleMiniBasketButton()}
+        onClick={e => this.props.toggleMiniBasket()}
         className="cart-btn btn btn-link btn-link--header ml-3"
       >
         <img

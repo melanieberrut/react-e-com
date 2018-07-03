@@ -10,7 +10,7 @@ const content = {
   header: {
     nav: {
       pdp: 'Product Detail',
-      pdp: 'Product Listings'
+      plp: 'Product Listings'
     },
     iconnav: {
       basket: 'Basket',
