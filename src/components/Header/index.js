@@ -8,19 +8,27 @@ import HeaderWishlistLink from '../HeaderWishlistLink';
 import HeaderAccountLink from '../HeaderAccountLink';
 import HeaderSearchForm from '../HeaderSearchForm';
 import OffsideMainMenu from '../OffsideMainMenu';
-
+import MiniBasket from '../MiniBasket';
+import content from '../../content';
 import iconMenu from '../../images/icon-navicon.svg';
 
 class Header extends Component {
-
 	constructor() {
 		super();
 		this.state = {
-			isMobileNavOpened: false
+			isMobileNavOpened: false,
+			isMiniBasketOpened: false
 		};
 
 		this.handleHamburgerButton = this.handleHamburgerButton.bind(this);
 		this.handleClickCloseMenu = this.handleClickCloseMenu.bind(this);
+		this.handleMiniBasketButton = this.handleMiniBasketButton.bind(this);
+	}
+
+	handleMiniBasketButton() {
+		this.setState(prevState => ({
+			isMiniBasketOpened: !prevState.isMiniBasketOpened
+		}));
 	}
 
 	handleHamburgerButton() {
@@ -36,7 +44,6 @@ class Header extends Component {
 	}
 
 	render() {
-		
 		let isNavOpened = this.state.isMobileNavOpened;
 
 		return (
@@ -57,20 +64,33 @@ class Header extends Component {
 									<HeaderSearchForm cssModifier="d-none d-lg-flex d-xl-flex" />
 								</div>
 								<div className="col-9 col-sm-9 col-lg-4 text-right">
-									<HeaderCartLink />
+									<HeaderCartLink
+										isMiniBasketOpened={this.state.isMiniBasketOpened}
+										handleMiniBasketButton={this.handleMiniBasketButton}
+									/>
 									<div className="d-none d-sm-inline-block">
 										<HeaderWishlistLink />
 										<HeaderAccountLink />
 									</div>
 									<div className="d-inline-block d-lg-none">
-										<a onClick={ this.handleHamburgerButton } className="nav-btn btn btn-link ml-3">
-											<img src={iconMenu} className="nav-btn__icon icon icon--header" alt="Menu" aria-label="Menu" /> 
-											<span className="sr-only">Menu</span>
+										<a onClick={this.handleHamburgerButton} className="nav-btn btn btn-link ml-3">
+											<img
+												src={iconMenu}
+												className="nav-btn__icon icon icon--header"
+												alt={content.header.iconnav.menu}
+												aria-label={content.header.iconnav.menu}
+											/>
+											<span className="sr-only">{content.header.iconnav.menu}</span>
 										</a>
 									</div>
+
+									{this.state.isMiniBasketOpened && <MiniBasket />}
 								</div>
 							</div>
-							<OffsideMainMenu isNavOpened={ isNavOpened } handleClickCloseMenu={ this.handleClickCloseMenu } />
+							<OffsideMainMenu
+								isNavOpened={isNavOpened}
+								handleClickCloseMenu={this.handleClickCloseMenu}
+							/>
 						</div>
 					</nav>
 				</header>
