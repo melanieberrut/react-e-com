@@ -26,7 +26,6 @@ class SignInForm extends Component {
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
         history.push('/');
-        console.log('signed in, then redirect');
       })
       .catch(error => {
         this.setState(byPropKey('error', error));
