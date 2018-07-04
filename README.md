@@ -21,4 +21,4 @@ Listed of endpoints can be found in _endpoints.js_
 
 # Testing
 To test async calls we use `__mocks__` directory.  
-
+Run test coverage `npm run test -- --coverage`

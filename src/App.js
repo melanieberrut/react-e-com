@@ -8,9 +8,11 @@ import ProductDetails from './pages/ProductDetails';
 import ProductsListing from './pages/ProductsListing';
 import ContactUs from './pages/ContactUs';
 import Cart from './pages/Cart';
-import Login from './pages/Login';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 import NoMatch from './pages/NoMatch';
 import Wishlist from './pages/Wishlist';
+import MyAccount from './pages/MyAccount';
 
 class App extends React.Component {
   render() {
@@ -28,8 +30,10 @@ class App extends React.Component {
                     <Route path="/plp" component={ProductsListing} />
                     <Route path="/contact-us" component={ContactUs} />
                     <Route path="/cart" component={Cart} />
-                    <Route path="/login" component={Login} />
+                    <Route path="/signin" component={SignIn} />
+                    <Route path="/signup" component={SignUp} />
                     <Route path="/wishlist" component={Wishlist} />
+                    <Route path="/myaccount" component={MyAccount} />
                     <Route component={NoMatch} />
                   </Switch>
                 </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { firebase } from './firebase';
 
 const AppContext = React.createContext();
 const AppConsumer = AppContext.Consumer;
@@ -7,14 +8,24 @@ class AppProvider extends React.Component {
   state = {
     wishlistCount: 0,
     wishlistProducts: [],
+    authUser: false,
     cartCount: 0,
-    cartProducts: [],
+    cartProducts: []
   };
 
   updateWishlist = products => {
     this.setState({ wishlistProducts: products });
     this.setState({ wishlistCount: products.length });
   };
+
+  toggleIsAuth = authUser => {
+    this.setState({ authUser });
+  };
+  componentDidMount() {
+    firebase.auth.onAuthStateChanged(authUser => {
+      authUser ? this.setState(() => ({ authUser })) : this.setState(() => ({ authUser: null }));
+    });
+  }
 
   updateCart = products => {
     let cartCount = products
@@ -30,6 +41,7 @@ class AppProvider extends React.Component {
         value={{
           state: this.state,
           updateWishlist: this.updateWishlist,
+          toggleIsAuth: this.toggleIsAuth,
           updateCart: this.updateCart
         }}
       >
