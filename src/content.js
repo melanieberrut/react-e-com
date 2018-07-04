@@ -22,7 +22,8 @@ const content = {
   minibasket: {
     title: 'Mini Basket',
     empty: 'Your basket is empty',
-    totalslabel: 'Totals (excl. charges)'
+    totalslabel: 'Totals (excl. charges)',
+    basket: 'View or edit basket'
   },
   cart: {
     title: 'Basket page',

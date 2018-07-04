@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { AppConsumer } from '../../AppContext';
 import MiniBasketEntry from '../MiniBasketEntry';
 import content from '../../content';
+import { NavLink } from 'react-router-dom';
 
 class MiniBasket extends Component {
   render() {
@@ -14,7 +15,7 @@ class MiniBasket extends Component {
         .reduce((accumulator, currentValue) => accumulator + currentValue)
         .toFixed(2);
       return (
-        <div className="mini-basket ">
+        <div className="mini-basket">
           <div
             onClick={() => this.props.toggleMiniBasket()}
             className="mini-basket__overlay overlay-click"
@@ -39,6 +40,13 @@ class MiniBasket extends Component {
                 </div>
               </div>
             </div>
+            <NavLink
+              to="/cart"
+              onClick={() => this.props.toggleMiniBasket()}
+              className="btn btn-primary btn-block mt-4"
+            >
+              {content.minibasket.basket}
+            </NavLink>
           </div>
         </div>
       );
