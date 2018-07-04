@@ -3,16 +3,15 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 class NavigationList extends Component {
-
 	generateParentClass() {
-		return this.props.modifierParentClass ? `navbar-nav nav nav-underline `+ this.props.modifierParentClass : `navbar-nav nav nav-underline`;
+		return this.props.modifierParentClass
+			? `navbar-nav nav nav-underline ` + this.props.modifierParentClass
+			: `navbar-nav nav nav-underline`;
 	}
 
 	render() {
-
 		return (
-
-			<ul className={ this.generateParentClass() }>
+			<ul className={this.generateParentClass()}>
 				<li className="nav-item">
 					<NavLink to="/products/6" className="nav-link">
 						PDP
@@ -24,13 +23,12 @@ class NavigationList extends Component {
 					</NavLink>
 				</li>
 			</ul>
-
 		);
 	}
 }
 
 NavigationList.propTypes = {
-	modifierParentClass: PropTypes.string,
+	modifierParentClass: PropTypes.string
 };
 
 export default NavigationList;
