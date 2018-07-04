@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { AppConsumer } from '../../AppContext';
 import PropTypes from 'prop-types';
-import content from "../../content";
+import content from '../../content';
 
 class AddToCart extends Component {
-
 	constructor() {
 		super();
 
@@ -16,8 +15,8 @@ class AddToCart extends Component {
 		const cartProds = appContext.state.cartProducts;
 		const currId = this.props.productDetails.id;
 		let foundIndex = cartProds.findIndex(prod => prod.id === currId);
-		
-		if(foundIndex >= 0) {
+
+		if (foundIndex >= 0) {
 			// If exist in the cart appContext
 			let curQty = cartProds[foundIndex].qty;
 			let addedQty = this.props.productDetails.qty;
@@ -27,14 +26,17 @@ class AddToCart extends Component {
 			// If does not exist in the cart appContext
 			cartProds.push(productDetails);
 		}
-		// Update 
+		// Update
 		appContext.updateCart(cartProds, true);
 	}
 
-
 	render() {
 		return (
-			<button type="button" className="btn btn-primary btn-block btn-lg" onClick={() => this.handleAddToCart(this.props.productDetails)}>
+			<button
+				type="button"
+				className="btn btn-primary btn-block btn-lg"
+				onClick={() => this.handleAddToCart(this.props.productDetails)}
+			>
 				{content.addtocart}
 			</button>
 		);
@@ -46,5 +48,5 @@ export default props => (
 );
 
 AddToCart.propTypes = {
-	productDetails: PropTypes.object.isRequired,
+	productDetails: PropTypes.object.isRequired
 };

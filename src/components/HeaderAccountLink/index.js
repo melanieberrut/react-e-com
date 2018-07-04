@@ -3,6 +3,7 @@ import iconAccount from '../../images/icon-user.svg';
 import iconLogin from '../../images/icon-gear.svg';
 import { AppConsumer } from '../../AppContext';
 import { NavLink } from 'react-router-dom';
+import content from '../../content';
 
 class HeaderAccountLink extends Component {
   render() {
@@ -17,7 +18,7 @@ class HeaderAccountLink extends Component {
           alt="Account"
           aria-label="Account"
         />
-        <span className="sr-only">Account</span>
+        <span className="sr-only">{content.Account}</span>
       </NavLink>
     );
   }

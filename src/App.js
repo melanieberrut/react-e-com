@@ -21,7 +21,7 @@ class App extends React.Component {
         <Router>
           <div className="app-container">
             <Header />
-            <div className="app-body">
+            <div className="app-body clearfix">
               <div className="container">
                 <div className="row no-gutters">
                   <Switch>

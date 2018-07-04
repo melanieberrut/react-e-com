@@ -8,27 +8,29 @@ import HeaderWishlistLink from '../HeaderWishlistLink';
 import HeaderAccountLink from '../HeaderAccountLink';
 import HeaderSearchForm from '../HeaderSearchForm';
 import OffsideMainMenu from '../OffsideMainMenu';
-
+import MiniBasket from '../MiniBasket';
+import content from '../../content';
 import iconMenu from '../../images/icon-navicon.svg';
 
 class Header extends Component {
   constructor() {
     super();
     this.state = {
-      isMobileNavOpened: false
+      isMobileNavOpened: false,
+      isMiniBasketOpened: false
     };
 
-    this.handleHamburgerButton = this.handleHamburgerButton.bind(this);
-    this.handleClickCloseMenu = this.handleClickCloseMenu.bind(this);
+    this.toggleHamburgerMenu = this.toggleHamburgerMenu.bind(this);
+    this.toggleMiniBasket = this.toggleMiniBasket.bind(this);
   }
 
-  handleHamburgerButton() {
+  toggleMiniBasket() {
     this.setState(prevState => ({
-      isMobileNavOpened: !prevState.isMobileNavOpened
+      isMiniBasketOpened: !prevState.isMiniBasketOpened
     }));
   }
 
-  handleClickCloseMenu() {
+  toggleHamburgerMenu() {
     this.setState(prevState => ({
       isMobileNavOpened: !prevState.isMobileNavOpened
     }));
@@ -55,27 +57,34 @@ class Header extends Component {
                   <HeaderSearchForm cssModifier="d-none d-lg-flex d-xl-flex" />
                 </div>
                 <div className="col-9 col-sm-9 col-lg-4 text-right">
-                  <HeaderCartLink />
+                  <HeaderCartLink
+                    isMiniBasketOpened={this.state.isMiniBasketOpened}
+                    toggleMiniBasket={this.toggleMiniBasket}
+                  />
                   <div className="d-none d-sm-inline-block">
                     <HeaderWishlistLink />
                     <HeaderAccountLink />
                   </div>
                   <div className="d-inline-block d-lg-none">
-                    <a onClick={this.handleHamburgerButton} className="nav-btn btn btn-link ml-3">
+                    <a onClick={this.toggleHamburgerMenu} className="nav-btn btn btn-link ml-3">
                       <img
                         src={iconMenu}
                         className="nav-btn__icon icon icon--header"
-                        alt="Menu"
-                        aria-label="Menu"
+                        alt={content.header.iconnav.menu}
+                        aria-label={content.header.iconnav.menu}
                       />
-                      <span className="sr-only">Menu</span>
+                      <span className="sr-only">{content.header.iconnav.menu}</span>
                     </a>
                   </div>
+
+                  {this.state.isMiniBasketOpened && (
+                    <MiniBasket toggleMiniBasket={this.toggleMiniBasket} />
+                  )}
                 </div>
               </div>
               <OffsideMainMenu
                 isNavOpened={isNavOpened}
-                handleClickCloseMenu={this.handleClickCloseMenu}
+                toggleHamburgerMenu={this.toggleHamburgerMenu}
               />
             </div>
           </nav>
