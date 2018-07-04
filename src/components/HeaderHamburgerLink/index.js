@@ -5,8 +5,13 @@ class HeaderHamburgerLink extends Component {
   render() {
     return (
       <a className="nav-btn btn btn-link ml-3">
-        <img src={iconMenu} className="nav-btn__icon icon icon--header" alt="Menu" aria-label="Menu" /> 
-        <span className="sr-only">Menu</span>
+        <img
+          src={iconMenu}
+          className="nav-btn__icon icon icon--header"
+          alt={content.header.iconnav.menu}
+          aria-label={content.header.iconnav.menu}
+        />
+        <span className="sr-only">{content.header.iconnav.menu}</span>
       </a>
     );
   }

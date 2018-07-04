@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import iconCart from '../../images/icon-cart.svg';
-import { NavLink } from 'react-router-dom';
 import AddToCartWidget from '../AddToCartWidget';
+import content from '../../content';
 
 class HeaderCartLink extends Component {
   render() {
     return (
-      <NavLink to="/cart" className="cart-btn btn btn-link btn-link--header ml-3">
-        <img src={iconCart} className="cart-btn__icon icon icon--header" alt="Cart" aria-label="Cart" /> 
-        <span className="sr-only">Cart</span>
+      <div
+        onClick={e => this.props.toggleMiniBasket()}
+        className="cart-btn btn btn-link btn-link--header ml-3"
+      >
+        <img
+          src={iconCart}
+          className="cart-btn__icon icon icon--header"
+          alt={content.header.iconnav.basket}
+          aria-label={content.header.iconnav.basket}
+        />
+        <span className="sr-only">{content.header.iconnav.basket}</span>
         <AddToCartWidget />
-      </NavLink>
+      </div>
     );
   }
 }

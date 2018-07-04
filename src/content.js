@@ -7,8 +7,25 @@ const content = {
   removefromfavourites: '⭐️ Remove from Favourites',
   productidpreffix: '#',
   currency: '£',
+  header: {
+    nav: {
+      pdp: 'Product Detail',
+      plp: 'Product Listings'
+    },
+    iconnav: {
+      basket: 'Basket',
+      wishlist: 'Wishlist',
+      account: 'Account',
+      menu: 'Menu'
+    }
+  },
+  minibasket: {
+    title: 'Mini Basket',
+    empty: 'Your basket is empty',
+    totalslabel: 'Totals (excl. charges)'
+  },
   cart: {
-    title: 'Cart page',
+    title: 'Basket page',
     carttable: {
       headers: {
         products: 'Products',
@@ -34,7 +51,7 @@ const content = {
       vatUnit: '%'
     },
     empty: {
-      text: 'Your cart is empty at the moment, please add some items to your cart',
+      text: 'Your basket is empty at the moment, please add some items to your basket',
       btn: 'Back to the homepage'
     },
     continuetopay: 'Continue to Pay'

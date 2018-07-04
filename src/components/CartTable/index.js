@@ -32,7 +32,6 @@ class CartTable extends Component {
 						)}
 					</AppConsumer>
 				</div>
-				<div className="table-one__footers" />
 			</div>
 		);
 	}
