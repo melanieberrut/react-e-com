@@ -2,7 +2,13 @@ import { auth } from './firebase';
 
 // Sign Up
 const doCreateUserWithEmailAndPassword = (email, password) =>
-  auth.createUserWithEmailAndPassword(email, password);
+  auth.createUserWithEmailAndPassword(email, password).then(function() {
+    var username = document.getElementById('userName').value;
+    var newuser = auth.currentUser;
+    newuser.updateProfile({
+      displayName: username
+    });
+  });
 
 // Sign In
 const doSignInWithEmailAndPassword = (email, password) =>
