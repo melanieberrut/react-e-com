@@ -9,17 +9,16 @@ class ProductTile extends Component {
 
     return (
       <div className="card">
-        <img className="card-img-top" src={product.thumb} alt={product.name} />
+        <Link to={'/products/' + product.id}>
+          <img className="card-img-top" src={product.thumb} alt={product.name} />
+        </Link>
         <div className="card-body">
-          <h5 className="card-title">
-            {product.name}
-            <AddToWishlist isAdded={product.inWishlist} productId={product.id} />
-          </h5>
+          <Link to={'/products/' + product.id}>
+            <h5 className="card-title">{product.name}</h5>
+          </Link>
+          <AddToWishlist isAdded={product.inWishlist} productId={product.id} />
 
           <p className="card-text">{product.descShort}</p>
-          <Link to={'/products/' + product.id} className="btn btn-primary">
-            Go to Product
-          </Link>
         </div>
       </div>
     );

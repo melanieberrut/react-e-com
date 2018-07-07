@@ -29,7 +29,7 @@ class Cart extends Component {
           </div>
 
           <div className="col-12 text-right">
-            <NavLink to={'/'} className="btn btn-lg btn-primary">
+            <NavLink to={'/payment'} className="btn btn-lg btn-primary">
               {content.cart.continuetopay}
             </NavLink>
           </div>

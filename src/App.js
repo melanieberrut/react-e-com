@@ -13,6 +13,7 @@ import SignUp from './pages/SignUp';
 import NoMatch from './pages/NoMatch';
 import Wishlist from './pages/Wishlist';
 import MyAccount from './pages/MyAccount';
+import PaymentPage from './pages/Payment';
 
 class App extends React.Component {
   render() {
@@ -34,6 +35,7 @@ class App extends React.Component {
                     <Route path="/signup" component={SignUp} />
                     <Route path="/wishlist" component={Wishlist} />
                     <Route path="/myaccount" component={MyAccount} />
+                    <Route path="/payment" component={PaymentPage} />
                     <Route component={NoMatch} />
                   </Switch>
                 </div>
