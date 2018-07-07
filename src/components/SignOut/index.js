@@ -11,7 +11,11 @@ class SignOutButton extends Component {
 
   render() {
     return (
-      <button type="button" onClick={this.onClick}>
+      <button
+        type="button"
+        className="btn btn-outline-dark btn-lg btn-block"
+        onClick={this.onClick}
+      >
         Sign Out
       </button>
     );
