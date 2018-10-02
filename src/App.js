@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { AppProvider } from './AppContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 import ProductsListing from './pages/ProductsListing';
@@ -33,7 +34,7 @@ class App extends React.Component {
                     <Route path="/signin" component={SignIn} />
                     <Route path="/signup" component={SignUp} />
                     <Route path="/wishlist" component={Wishlist} />
-                    <Route path="/myaccount" component={MyAccount} />
+                    <ProtectedRoute path="/myaccount" component={MyAccount} redirectTo="signin" />
                     <Route component={NoMatch} />
                   </Switch>
                 </div>

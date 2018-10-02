@@ -16,6 +16,17 @@ class MyAccount extends Component {
         this.setState({ user });
       }
     });
+    // Hack to prevent memory leak
+    // Later onAuthStateChanged is canceled in componentWillUnmount
+    this.fireBaseListener = auth.onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ user });
+      }
+    });
+  }
+  componentWillUnmount() {
+    this.fireBaseListener && this.fireBaseListener();
+    this.authListener = undefined;
   }
   render() {
     if (this.state.user) {

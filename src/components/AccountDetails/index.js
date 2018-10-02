@@ -7,7 +7,7 @@ const UserDetails = ({ history, user }) => {
       <div className="section-heading">User details</div>
       <div>user name: {user.displayName}</div>
       <div>email: {user.email}</div>
-      <button class="btn btn-outline-primary btn-sm">Edit</button>
+      <button className="btn btn-outline-primary btn-sm">Edit</button>
     </div>
   );
 };
@@ -21,7 +21,7 @@ const UserAddress = ({ history, user }) => {
       <div>Address Line 1</div>
       <div>Town</div>
       <div>Post Code</div>
-      <button class="btn btn-outline-primary btn-sm">Edit</button>
+      <button className="btn btn-outline-primary btn-sm">Edit</button>
     </div>
   );
 };

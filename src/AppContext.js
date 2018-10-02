@@ -42,7 +42,8 @@ class AppProvider extends React.Component {
           state: this.state,
           updateWishlist: this.updateWishlist,
           toggleIsAuth: this.toggleIsAuth,
-          updateCart: this.updateCart
+          updateCart: this.updateCart,
+          authUser: this.state.authUser
         }}
       >
         {this.props.children}
