@@ -11,11 +11,6 @@ class MyAccount extends Component {
     };
   }
   componentWillMount() {
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        this.setState({ user });
-      }
-    });
     // Hack to prevent memory leak
     // Later onAuthStateChanged is canceled in componentWillUnmount
     this.fireBaseListener = auth.onAuthStateChanged(user => {
